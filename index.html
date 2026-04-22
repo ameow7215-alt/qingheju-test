@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清和居 - .site域名测试</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .logo {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .status-card {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-left: 5px solid #4ade80;
+        }
+        
+        .status-card.warning {
+            border-left-color: #fbbf24;
+        }
+        
+        .status-card.error {
+            border-left-color: #f87171;
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .icon {
+            font-size: 1.8rem;
+        }
+        
+        ul {
+            list-style: none;
+            margin-left: 10px;
+        }
+        
+        li {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+        }
+        
+        li:last-child {
+            border-bottom: none;
+        }
+        
+        .checkmark {
+            color: #4ade80;
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .xmark {
+            color: #f87171;
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .test-button {
+            display: block;
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(90deg, #4ade80, #22d3ee);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .test-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .test-button:active {
+            transform: translateY(-1px);
+        }
+        
+        .result {
+            margin-top: 25px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            display: none;
+        }
+        
+        .result.show {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .info-box {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 25px;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        .timestamp {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">🏯</div>
+        <h1>清和居 - .site域名测试</h1>
+        
+        <div class="status-card">
+            <h2><span class="icon">🔍</span> 测试目的</h2>
+            <p>验证 .site 域名在微信小程序 web-view 中的兼容性</p>
+        </div>
+        
+        <div class="status-card">
+            <h2><span class="icon">📱</span> 环境检测</h2>
+            <ul id="environment-list">
+                <li>检测中...</li>
+            </ul>
+        </div>
+        
+        <div class="status-card" id="compatibility-card">
+            <h2><span class="icon">✅</span> 兼容性测试</h2>
+            <p>点击下方按钮进行功能测试：</p>
+            <button class="test-button" id="run-test">运行兼容性测试</button>
+            
+            <div class="result" id="test-result">
+                <h3>测试结果</h3>
+                <div id="result-content"></div>
+            </div>
+        </div>
+        
+        <div class="info-box">
+            <h3>测试说明</h3>
+            <p>此页面用于测试 .site 域名在微信环境中的加载情况。</p>
+            <p>如果页面正常显示且功能正常，说明微信支持 .site 域名。</p>
+            <p>测试结果将决定清和居 H5 页面是否使用 .site 域名。</p>
+        </div>
+        
+        <div class="timestamp">
+            测试时间: <span id="current-time"></span>
+        </div>
+    </div>
+
+    <script>
+        // 环境检测
+        function detectEnvironment() {
+            const list = document.getElementById('environment-list');
+            list.innerHTML = '';
+            
+            const checks = [
+                {
+                    name: 'HTTPS 连接',
+                    check: () => window.location.protocol === 'https:',
+                    message: '安全连接已建立'
+                },
+                {
+                    name: '微信浏览器检测',
+                    check: () => /MicroMessenger/i.test(navigator.userAgent),
+                    message: '在微信环境中运行'
+                },
+                {
+                    name: 'JavaScript 支持',
+                    check: () => true,
+                    message: 'JavaScript 正常执行'
+                },
+                {
+                    name: 'CSS3 支持',
+                    check: () => 'transform' in document.documentElement.style,
+                    message: '现代CSS功能可用'
+                },
+                {
+                    name: '域名解析',
+                    check: () => window.location.hostname.includes('.site'),
+                    message: '.site 域名正常解析'
+                }
+            ];
+            
+            checks.forEach(item => {
+                const li = document.createElement('li');
+                const isPass = item.check();
+                
+                li.innerHTML = `
+                    <span class="${isPass ? 'checkmark' : 'xmark'}">${isPass ? '✓' : '✗'}</span>
+                    <span>${item.name}: ${isPass ? item.message : '检测失败'}</span>
+                `;
+                
+                list.appendChild(li);
+            });
+            
+            // 更新兼容性卡片样式
+            const compatibilityCard = document.getElementById('compatibility-card');
+            const allPass = checks.every(item => item.check());
+            
+            if (allPass) {
+                compatibilityCard.classList.remove('warning', 'error');
+            } else {
+                compatibilityCard.classList.add('warning');
+            }
+        }
+        
+        // 运行功能测试
+        function runCompatibilityTest() {
+            const resultDiv = document.getElementById('test-result');
+            const contentDiv = document.getElementById('result-content');
+            
+            const tests = [
+                {
+                    name: 'DOM 操作测试',
+                    test: () => {
+                        const testEl = document.createElement('div');
+                        testEl.id = 'temp-test-el';
+                        document.body.appendChild(testEl);
+                        const found = document.getElementById('temp-test-el');
+                        document.body.removeChild(testEl);
+                        return !!found;
+                    }
+                },
+                {
+                    name: '事件监听测试',
+                    test: () => {
+                        let eventFired = false;
+                        const testFn = () => { eventFired = true; };
+                        document.addEventListener('test-event', testFn);
+                        document.dispatchEvent(new Event('test-event'));
+                        document.removeEventListener('test-event', testFn);
+                        return eventFired;
+                    }
+                },
+                {
+                    name: '本地存储测试',
+                    test: () => {
+                        try {
+                            localStorage.setItem('test-key', 'test-value');
+                            const value = localStorage.getItem('test-key');
+                            localStorage.removeItem('test-key');
+                            return value === 'test-value';
+                        } catch (e) {
+                            return false;
+                        }
+                    }
+                },
+                {
+                    name: 'Canvas 测试',
+                    test: () => {
+                        try {
+                            const canvas = document.createElement('canvas');
+                            return !!(canvas.getContext && canvas.getContext('2d'));
+                        } catch (e) {
+                            return false;
+                        }
+                    }
+                },
+                {
+                    name: 'AJAX/Fetch 测试',
+                    test: () => {
+                        return 'fetch' in window || 'XMLHttpRequest' in window;
+                    }
+                }
+            ];
+            
+            let passed = 0;
+            let total = tests.length;
+            
+            let resultHTML = '<ul>';
+            tests.forEach(test => {
+                try {
+                    const passedTest = test.test();
+                    if (passedTest) passed++;
+                    
+                    resultHTML += `
+                        <li>
+                            <span class="${passedTest ? 'checkmark' : 'xmark'}">${passedTest ? '✓' : '✗'}</span>
+                            ${test.name}: ${passedTest ? '通过' : '失败'}
+                        </li>
+                    `;
+                } catch (e) {
+                    resultHTML += `
+                        <li>
+                            <span class="xmark">✗</span>
+                            ${test.name}: 错误 - ${e.message}
+                        </li>
+                    `;
+                }
+            });
+            resultHTML += '</ul>';
+            
+            const percentage = Math.round((passed / total) * 100);
+            resultHTML = `
+                <div class="status-card ${percentage === 100 ? '' : percentage >= 80 ? 'warning' : 'error'}">
+                    <h3>测试完成: ${passed}/${total} 通过 (${percentage}%)</h3>
+                    ${resultHTML}
+                </div>
+                <p style="margin-top: 15px;">
+                    <strong>结论:</strong> 
+                    ${percentage === 100 ? '.site 域名在微信中完全兼容！' : 
+                      percentage >= 80 ? '.site 域名在微信中基本兼容，可能存在小问题。' : 
+                      '.site 域名在微信中可能存在兼容性问题。'}
+                </p>
+            `;
+            
+            contentDiv.innerHTML = resultHTML;
+            resultDiv.classList.add('show');
+            
+            // 滚动到结果
+            resultDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // 更新时间
+        function updateTime() {
+            const now = new Date();
+            const timeString = now.toLocaleString('zh-CN', {
+                year: 'numeric',
+                month: '2-digit',
+                day: '2-digit',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            });
+            document.getElementById('current-time').textContent = timeString;
+        }
+        
+        // 初始化
+        document.addEventListener('DOMContentLoaded', () => {
+            updateTime();
+            detectEnvironment();
+            
+            // 每秒更新时间
+            setInterval(updateTime, 1000);
+            
+            // 绑定测试按钮事件
+            document.getElementById('run-test').addEventListener('click', runCompatibilityTest);
+            
+            // 页面加载完成提示
+            setTimeout(() => {
+                const compatibilityCard = document.getElementById('compatibility-card');
+                compatibilityCard.classList.remove('warning');
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
