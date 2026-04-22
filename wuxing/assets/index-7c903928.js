@@ -8372,7 +8372,7 @@ const wuxingData = {
   }
 };
 const wuxingOrder = ["wood", "fire", "earth", "metal", "water"];
-const HomePage_vue_vue_type_style_index_0_scoped_1d392322_lang = "";
+const HomePage_vue_vue_type_style_index_0_scoped_70ac85f4_lang = "";
 const _hoisted_1$1 = { class: "home-container" };
 const _hoisted_2$1 = { class: "cycle-diagram" };
 const _hoisted_3$1 = ["onClick"];
@@ -8415,17 +8415,13 @@ const _sfc_main$1 = {
     });
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock("div", _hoisted_1$1, [
-        _cache[6] || (_cache[6] = createBaseVNode("div", { class: "ink-decoration" }, [
-          createBaseVNode("div", { class: "ink-circle ink-circle-1" }),
-          createBaseVNode("div", { class: "ink-circle ink-circle-2" }),
-          createBaseVNode("div", { class: "ink-wave" })
-        ], -1)),
+        _cache[6] || (_cache[6] = createStaticVNode('<div class="ink-decoration" data-v-70ac85f4><div class="ink-circle ink-circle-1" data-v-70ac85f4></div><div class="ink-circle ink-circle-2" data-v-70ac85f4></div><div class="ink-circle ink-circle-3" data-v-70ac85f4></div><div class="ink-wave" data-v-70ac85f4></div></div>', 1)),
         createBaseVNode("header", {
           class: "header",
           ref_key: "headerRef",
           ref: headerRef
         }, [..._cache[0] || (_cache[0] = [
-          createStaticVNode('<div class="header-content" data-v-1d392322><div class="title-wrapper" data-v-1d392322><span class="title-deco" data-v-1d392322></span><h1 class="title" data-v-1d392322>五行之力</h1><span class="title-deco" data-v-1d392322></span></div><p class="subtitle" data-v-1d392322>道家视角的解读</p><div class="divider" data-v-1d392322><span class="divider-line" data-v-1d392322></span><span class="divider-icon" data-v-1d392322>炁</span><span class="divider-line" data-v-1d392322></span></div><p class="intro" data-v-1d392322> 五行（金、木、水、火、土）是道家哲学的核心概念，代表宇宙万物的五种基本属性与运行规律。 </p></div>', 1)
+          createStaticVNode('<div class="header-content" data-v-70ac85f4><div class="title-wrapper" data-v-70ac85f4><span class="title-deco" data-v-70ac85f4></span><h1 class="title" data-v-70ac85f4>五行之力</h1><span class="title-deco" data-v-70ac85f4></span></div><p class="subtitle" data-v-70ac85f4>道家视角的解读</p><div class="divider" data-v-70ac85f4><span class="divider-line" data-v-70ac85f4></span><span class="divider-icon" data-v-70ac85f4>☯</span><span class="divider-line" data-v-70ac85f4></span></div><p class="intro" data-v-70ac85f4> 五行（金、木、水、火、土）是道家哲学的核心概念，代表宇宙万物的五种基本属性与运行规律。 </p></div>', 1)
         ])], 512),
         createBaseVNode("section", {
           class: "cycle-section",
@@ -8448,7 +8444,7 @@ const _sfc_main$1 = {
               ], 14, _hoisted_3$1);
             }), 128))
           ]),
-          _cache[2] || (_cache[2] = createStaticVNode('<div class="cycle-legend" data-v-1d392322><div class="legend-item" data-v-1d392322><span class="legend-color generate" data-v-1d392322></span><span data-v-1d392322>相生：金→水→木→火→土→金</span></div><div class="legend-item" data-v-1d392322><span class="legend-color restrict" data-v-1d392322></span><span data-v-1d392322>相克：金→木→土→水→火→金</span></div></div>', 1))
+          _cache[2] || (_cache[2] = createStaticVNode('<div class="cycle-legend" data-v-70ac85f4><div class="legend-item" data-v-70ac85f4><span class="legend-color generate" data-v-70ac85f4></span><span data-v-70ac85f4>相生：金→水→木→火→土→金</span></div><div class="legend-item" data-v-70ac85f4><span class="legend-color restrict" data-v-70ac85f4></span><span data-v-70ac85f4>相克：金→木→土→水→火→金</span></div></div>', 1))
         ], 512),
         createBaseVNode("section", {
           class: "elements-section",
@@ -8507,15 +8503,15 @@ const _sfc_main$1 = {
           ref_key: "daoRef",
           ref: daoRef
         }, [..._cache[5] || (_cache[5] = [
-          createStaticVNode('<h2 class="section-title" data-v-1d392322><span class="section-title-text" data-v-1d392322>道家视角</span><span class="section-title-deco" data-v-1d392322></span></h2><div class="dao-content" data-v-1d392322><blockquote class="dao-quote" data-v-1d392322><p class="quote-text" data-v-1d392322>「道生一，一生二，二生三，三生万物。万物负阴而抱阳，冲气以为和。」</p><footer class="quote-author" data-v-1d392322>—— 《道德经》第四十二章</footer></blockquote><div class="dao-explanation" data-v-1d392322><p data-v-1d392322>在道家哲学中，五行并非孤立元素，而是阴阳相互作用下产生的五种基本状态：</p><ul class="dao-list" data-v-1d392322><li data-v-1d392322>五行对应人体的五脏、五官、五情</li><li data-v-1d392322>五行循环体现宇宙的动态平衡</li><li data-v-1d392322>修炼中的五行调和是养生的重要法门</li><li data-v-1d392322>五行智慧可应用于生活决策与环境布局</li></ul></div></div>', 2)
+          createStaticVNode('<h2 class="section-title" data-v-70ac85f4><span class="section-title-text" data-v-70ac85f4>道家视角</span><span class="section-title-deco" data-v-70ac85f4></span></h2><div class="dao-content" data-v-70ac85f4><blockquote class="dao-quote" data-v-70ac85f4><p class="quote-text" data-v-70ac85f4>「道生一，一生二，二生三，三生万物。万物负阴而抱阳，冲气以为和。」</p><footer class="quote-author" data-v-70ac85f4>—— 《道德经》第四十二章</footer></blockquote><div class="dao-explanation" data-v-70ac85f4><p data-v-70ac85f4>在道家哲学中，五行并非孤立元素，而是阴阳相互作用下产生的五种基本状态：</p><ul class="dao-list" data-v-70ac85f4><li data-v-70ac85f4>五行对应人体的五脏、五官、五情</li><li data-v-70ac85f4>五行循环体现宇宙的动态平衡</li><li data-v-70ac85f4>修炼中的五行调和是养生的重要法门</li><li data-v-70ac85f4>五行智慧可应用于生活决策与环境布局</li></ul></div></div>', 2)
         ])], 512),
-        _cache[7] || (_cache[7] = createStaticVNode('<footer class="footer" data-v-1d392322><div class="footer-content" data-v-1d392322><div class="footer-yin-yang" data-v-1d392322>☯</div><p class="footer-text" data-v-1d392322>清和居 · 玄明神系</p><p class="footer-subtext" data-v-1d392322>道家数字生活助手</p></div></footer>', 1))
+        _cache[7] || (_cache[7] = createStaticVNode('<footer class="footer" data-v-70ac85f4><div class="footer-content" data-v-70ac85f4><div class="footer-yin-yang" data-v-70ac85f4>☯</div><p class="footer-text" data-v-70ac85f4>清和居 · 玄明神系</p><p class="footer-subtext" data-v-70ac85f4>道家数字生活助手</p></div></footer>', 1))
       ]);
     };
   }
 };
-const HomePage = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__scopeId", "data-v-1d392322"]]);
-const ElementDetail_vue_vue_type_style_index_0_scoped_3e71947d_lang = "";
+const HomePage = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__scopeId", "data-v-70ac85f4"]]);
+const ElementDetail_vue_vue_type_style_index_0_scoped_0cf3357e_lang = "";
 const _hoisted_1 = { class: "detail-header" };
 const _hoisted_2 = { class: "header-content" };
 const _hoisted_3 = { class: "element-icon" };
@@ -8628,7 +8624,7 @@ const _sfc_main = {
     };
   }
 };
-const ElementDetail = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-3e71947d"]]);
+const ElementDetail = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-0cf3357e"]]);
 const routes = [
   {
     path: "/",
@@ -8643,7 +8639,10 @@ const routes = [
   }
 ];
 const router = createRouter({
-  history: createWebHistory(),
+  // 修正：添加与部署路径匹配的base路径
+  // H5部署在 /wuxing/ 路径下，必须设置base为 '/wuxing/'
+  // 否则Vue Router无法正确匹配路由，页面会空白
+  history: createWebHistory("/wuxing/"),
   routes,
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
