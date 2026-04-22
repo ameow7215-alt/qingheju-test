@@ -1,0 +1,133 @@
+
+/* 固定背景层 */
+.fixed-bg-layer[data-v-dc02099d] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* 整体滚动容器 */
+.scroll-container[data-v-dc02099d] {
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(44, 62, 80, 0.2) transparent;
+  flex: 1;
+  min-height: 0;
+}
+.scroll-container[data-v-dc02099d]::-webkit-scrollbar {
+  width: 4px;
+}
+.scroll-container[data-v-dc02099d]::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scroll-container[data-v-dc02099d]::-webkit-scrollbar-thumb {
+  background-color: rgba(44, 62, 80, 0.2);
+  border-radius: 4px;
+}
+
+/* 卡片自适应高度 */
+.auto-height-card[data-v-dc02099d] {
+  height: auto;
+  min-height: auto;
+  flex-shrink: 0;
+}
+
+/* 卡片纹理背景 */
+.card-with-texture[data-v-dc02099d] {
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.60), rgba(255, 255, 255, 0.60));
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+/* 宣纸窗口阴影 */
+.shadow-xuan-window[data-v-dc02099d] {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+/* 马山正字体类 */
+.font-calligraphy[data-v-dc02099d] {
+  font-family: 'Ma Shan Zheng', cursive;
+  font-weight: 400;
+}
+
+/* 主标题超大字间距 */
+.title-extra-spacing[data-v-dc02099d] {
+  letter-spacing: 0.15em;
+}
+
+/* 维度网格 */
+.dimension-grid[data-v-dc02099d] {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+/* 头部放大图片容器 */
+.large-image-container[data-v-dc02099d] {
+  width: 100%;
+  height: 363px;
+  margin: -16px auto 0.5rem auto;
+  border-radius: 1rem 1rem 0 0;
+  overflow: hidden;
+  background-color: transparent;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* 图片顶部羽化效果 */
+.large-image-container img[data-v-dc02099d] {
+  border-radius: 1rem 1rem 0 0 !important;
+  background-color: transparent !important;
+  -webkit-mask-image: linear-gradient(to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.05) 2%,
+    rgba(0, 0, 0, 0.2) 4%,
+    rgba(0, 0, 0, 0.5) 6%,
+    rgba(0, 0, 0, 0.85) 7.5%,
+    rgba(0, 0, 0, 1) 8%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  mask-image: linear-gradient(to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.05) 2%,
+    rgba(0, 0, 0, 0.2) 4%,
+    rgba(0, 0, 0, 0.5) 6%,
+    rgba(0, 0, 0, 0.85) 7.5%,
+    rgba(0, 0, 0, 1) 8%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center top;
+     object-position: center top;
+}
+
+/* 结果页面动画 */
+@keyframes fadeInUp-a9e15631 {
+from {
+    opacity: 0;
+    transform: translateY(20px);
+}
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+div[data-v-a9e15631] {
+  animation: fadeInUp-a9e15631 0.6s ease-out;
+}
