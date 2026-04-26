@@ -2826,3 +2826,304 @@ video {
   --tw-rotate: 180deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
+
+/* Google Fonts @import removed - blocked in WeChat web-view in China network. System fallback. */
+.home-container[data-v-b62ca704] {
+  min-height: 100vh;
+  min-height: 100dvh;
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 400;
+}
+
+/* 马山正字体类 */
+.font-calligraphy[data-v-b62ca704] {
+  font-family: 'Ma Shan Zheng', cursive;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+}
+
+/* 副标题字体 */
+.subtitle-font[data-v-b62ca704] {
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+/* 按钮字体 */
+.btn-font[data-v-b62ca704] {
+  font-family: 'Ma Shan Zheng', cursive;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+}
+
+/* Google Fonts @import removed - blocked in WeChat web-view in China network. System fallback. */
+
+/* 马山正字体类 - 书法体用于标题和选项数字 */
+.font-calligraphy[data-v-758b8acb] {
+  font-family: 'Ma Shan Zheng', cursive;
+  font-weight: 400;
+}
+
+/* 思源宋体 - 正文字体 */
+.font-serif[data-v-758b8acb] {
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 400;
+}
+
+/* 卡片纹理背景 */
+.card-with-texture[data-v-758b8acb] {
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85));
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* 卡片阴影 */
+.shadow-xuan-card[data-v-758b8acb] {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* 已选中选项样式 */
+.selected-option[data-v-758b8acb] {
+  background-color: #27ae60;
+  color: white;
+}
+.selected-option[data-v-758b8acb]:hover {
+  background-color: #229954;
+}
+
+/* 未选中选项样式 */
+.unselected-option[data-v-758b8acb] {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid #e5e7eb;
+}
+.unselected-option[data-v-758b8acb]:hover {
+  border-color: #27ae60;
+  box-shadow: 0 4px 12px rgba(39, 174, 96, 0.15);
+}
+
+/* 文字颜色 */
+.text-\[\#2c3e50\][data-v-758b8acb] {
+  color: #2c3e50;
+}
+
+/* 字间距增大 - 标题和正文 */
+.tracking-widest[data-v-758b8acb] {
+  letter-spacing: 0.1em;
+}
+
+/* 标题超大字间距 */
+.title-extra-spacing[data-v-758b8acb] {
+  letter-spacing: 0.15em;
+}
+
+/* 悬停效果 */
+.group:hover .option-circle[data-v-758b8acb] {
+  transition: all 0.2s ease;
+}
+
+/* 过渡动画 */
+div[data-v-758b8acb] {
+  transition: all 0.2s ease;
+}
+
+/* Google Fonts @import removed - blocked in WeChat web-view in China network. System fallback. */
+.quiz-container[data-v-e0bf6a3d] {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+/* 马山正字体类 - 书法体用于标题和按钮 */
+.font-calligraphy[data-v-e0bf6a3d] {
+  font-family: 'Ma Shan Zheng', cursive;
+  font-weight: 400;
+}
+
+/* 主标题超大字间距 */
+.title-extra-spacing[data-v-e0bf6a3d] {
+  letter-spacing: 0.15em;
+}
+
+/* 按钮通用样式 */
+.btn-prev[data-v-e0bf6a3d] {
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #6b7280;
+  border: 1px solid #e5e7eb;
+}
+.btn-prev[data-v-e0bf6a3d]:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-color: #27ae60;
+}
+.btn-next[data-v-e0bf6a3d] {
+  background-color: #27ae60;
+  color: white;
+  box-shadow: 0 4px 12px rgba(39, 174, 96, 0.3);
+}
+.btn-next[data-v-e0bf6a3d]:hover {
+  background-color: #229954;
+  box-shadow: 0 6px 16px rgba(39, 174, 96, 0.4);
+}
+.btn-restart[data-v-e0bf6a3d] {
+  background-color: #f59e0b;
+  color: white;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+}
+.btn-restart[data-v-e0bf6a3d]:hover {
+  background-color: #d97706;
+  box-shadow: 0 6px 16px rgba(245, 158, 11, 0.4);
+}
+
+/* 字间距增大 */
+.tracking-widest[data-v-e0bf6a3d] {
+  letter-spacing: 0.1em;
+}
+
+/* 导航按钮过渡 */
+.nav-btn[data-v-e0bf6a3d] {
+  transition: all 0.2s ease;
+}
+.nav-btn[data-v-e0bf6a3d]:hover {
+  transform: scale(1.05);
+}
+
+/* 进度条过渡 */
+.h-full[data-v-e0bf6a3d] {
+  transition: width 0.5s ease-out;
+}
+
+/* 固定背景层 */
+.fixed-bg-layer[data-v-dc02099d] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* 整体滚动容器 */
+.scroll-container[data-v-dc02099d] {
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(44, 62, 80, 0.2) transparent;
+  flex: 1;
+  min-height: 0;
+}
+.scroll-container[data-v-dc02099d]::-webkit-scrollbar {
+  width: 4px;
+}
+.scroll-container[data-v-dc02099d]::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scroll-container[data-v-dc02099d]::-webkit-scrollbar-thumb {
+  background-color: rgba(44, 62, 80, 0.2);
+  border-radius: 4px;
+}
+
+/* 卡片自适应高度 */
+.auto-height-card[data-v-dc02099d] {
+  height: auto;
+  min-height: auto;
+  flex-shrink: 0;
+}
+
+/* 卡片纹理背景 */
+.card-with-texture[data-v-dc02099d] {
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.60), rgba(255, 255, 255, 0.60));
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+/* 宣纸窗口阴影 */
+.shadow-xuan-window[data-v-dc02099d] {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+/* 马山正字体类 */
+.font-calligraphy[data-v-dc02099d] {
+  font-family: 'Ma Shan Zheng', cursive;
+  font-weight: 400;
+}
+
+/* 主标题超大字间距 */
+.title-extra-spacing[data-v-dc02099d] {
+  letter-spacing: 0.15em;
+}
+
+/* 维度网格 */
+.dimension-grid[data-v-dc02099d] {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+/* 头部放大图片容器 */
+.large-image-container[data-v-dc02099d] {
+  width: 100%;
+  height: 363px;
+  margin: -16px auto 0.5rem auto;
+  border-radius: 1rem 1rem 0 0;
+  overflow: hidden;
+  background-color: transparent;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* 图片顶部羽化效果 */
+.large-image-container img[data-v-dc02099d] {
+  border-radius: 1rem 1rem 0 0 !important;
+  background-color: transparent !important;
+  -webkit-mask-image: linear-gradient(to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.05) 2%,
+    rgba(0, 0, 0, 0.2) 4%,
+    rgba(0, 0, 0, 0.5) 6%,
+    rgba(0, 0, 0, 0.85) 7.5%,
+    rgba(0, 0, 0, 1) 8%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  mask-image: linear-gradient(to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.05) 2%,
+    rgba(0, 0, 0, 0.2) 4%,
+    rgba(0, 0, 0, 0.5) 6%,
+    rgba(0, 0, 0, 0.85) 7.5%,
+    rgba(0, 0, 0, 1) 8%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center top;
+     object-position: center top;
+}
+
+/* 结果页面动画 */
+@keyframes fadeInUp-a9e15631 {
+from {
+    opacity: 0;
+    transform: translateY(20px);
+}
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+div[data-v-a9e15631] {
+  animation: fadeInUp-a9e15631 0.6s ease-out;
+}
